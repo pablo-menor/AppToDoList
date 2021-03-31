@@ -17,6 +17,11 @@
 
 }
 
+#tasks #task_name:focus{
+ outline: none;
+
+}
+
 #tasks label{
   font-size: 20px;
   font-family: monospace, Courier, 'Courier New';

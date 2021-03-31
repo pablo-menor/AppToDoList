@@ -126,6 +126,8 @@ function addTask(taskk, index) {
     checkButton.setAttribute("onclick", "funPrueba()");
     document.getElementById(index).append(checkButton);
     listOfChecks.push(checkButton);
+    let br = document.createElement("br");
+    document.querySelector("#listOfTasks").append(br);
 
 }
 function removeTask(taskk) {
