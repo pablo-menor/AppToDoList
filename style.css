@@ -1,11 +1,13 @@
 
 #tasks{
-    background-color: rgb(170, 167, 167);
+    background-color: rgb(219, 107, 2);
     text-align: center;
     width: 30%;
     margin: auto;
     height: 80px;
     margin-top: 7%;
+    border-radius: 7px;
+    color: #fff;
     
 
 }
@@ -25,7 +27,7 @@
 #listOfTasks{
   width: 30%;
   margin: auto;
-  background-color: #ccc;
+  background-color: rgb(255, 217, 50);
 }
 
 #listOfTasks p{
