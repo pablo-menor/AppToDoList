@@ -33,6 +33,7 @@ window.addEventListener('load', function () {
         addTask(taskk, index);
         //index--;     
         // }
+        
 
     }),
         console.log("NEW INDEX: " + index);
@@ -66,6 +67,7 @@ function funPrueba() {   //para eliminar
             }
         })
     });
+    location.reload();
 
 }
 
@@ -135,3 +137,7 @@ function addFromLocalStorage() {
     })
 
 }
+
+
+
+//Recargar la p'agina una vez depues de eliminar elementos.     
