@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
 
         let task = document.querySelector("#task_name").value;
 
-        // if (task != "") {
+        if (task != "") {
         index++;
         //actualizar el valor del index en el LS
         localStorage.setItem("index", index);
@@ -32,7 +32,7 @@ window.addEventListener('load', function () {
         let taskk = localStorage.getItem(keyName);
         addTask(taskk, index);
         //index--;     
-        // }
+         }
         
 
     }),
