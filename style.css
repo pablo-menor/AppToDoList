@@ -1,4 +1,8 @@
 
+body{
+ background-color: rgb(117, 117, 117);
+}
+
 #tasks{
     background-color: rgb(219, 107, 2);
     text-align: center;
@@ -13,9 +17,10 @@
 
 }
 
+
 #tasks #task_name{
   margin-top: 2%;
-
+  
 }
 
 #tasks #task_name:focus{
@@ -28,16 +33,26 @@
   font-family: monospace, Courier, 'Courier New';
   letter-spacing: 4px;
 }
-
+form button{
+  font-family: sans-serif;
+  
+}
 
 #listOfTasks{
   width: 30%;
   margin: auto;
   background-color: rgb(255, 217, 50);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #listOfTasks p{
     margin-left: 5%;
     margin-top: 0px;
    
+}
+
+
+.checkBox{
+  float: right;
+  margin-right: 10%;
 }
