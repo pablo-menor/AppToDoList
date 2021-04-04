@@ -25,13 +25,13 @@ window.addEventListener('load', function () {
 
         var keyName;
 
-        keyName = /*"Task "  +*/ index + "";
+        keyName = index + "";
 
         localStorage.setItem(keyName, task);
 
         let taskk = localStorage.getItem(keyName);
         addTask(taskk, index);
-        //index--;     
+          
          }
         
 
@@ -42,14 +42,13 @@ window.addEventListener('load', function () {
     console.log(listOfTasks);
     console.log(listOfChecks);
 
-    //PROBAR A RECARGAR PAGE UNA SOLA VEZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-
+  
 })
 
-function funPrueba() {   //para eliminar
+function deleteTask() {   
     listOfChecks.forEach(elementCheck => {
 
-        var id_checkbox = elementCheck.getAttribute("id");  ///console
+        var id_checkbox = elementCheck.getAttribute("id");  
 
         listOfParagraphs.forEach(element => {
 
@@ -80,7 +79,7 @@ function addTask(taskk, index) {
     index++;
     let paragraph = document.createElement("p");
     paragraph.setAttribute("id", index)
-    paragraph.innerHTML = taskk;
+    paragraph.innerHTML =   taskk;
     document.querySelector("#listOfTasks").append(paragraph);
     listOfTasks.push(taskk);
     listOfParagraphs.push(paragraph);
@@ -89,7 +88,7 @@ function addTask(taskk, index) {
     checkButton.setAttribute("type", "checkbox");
     checkButton.setAttribute("class", "checkBox")
     checkButton.setAttribute("id", index);
-    checkButton.setAttribute("onclick", "funPrueba()");
+    checkButton.setAttribute("onclick", "deleteTask()");
     document.getElementById(index).append(checkButton);
     listOfChecks.push(checkButton);
     let br = document.createElement("br");
@@ -97,13 +96,13 @@ function addTask(taskk, index) {
 
 }
 function removeTask(taskk) {
-    //REMOVE FROM LOCALSOTAGE MAYBE SINCE IT REFRESES
+    
     for (let i = 0; i < localStorage.length; i++) {
         let keyname = localStorage.key(i);
         if (keyname.value == taskk) {
             localStorage.removeItem(keyname);
         }
-        //AÑADIR AQUI O EN ELdde LOAD EL ELIMINAR LOS PARRAFOS QUE EL INNETHTML SEA NADA
+       
     }
 
 }
@@ -137,7 +136,3 @@ function addFromLocalStorage() {
     })
 
 }
-
-
-
-//Recargar la p'agina una vez depues de eliminar elementos.     
